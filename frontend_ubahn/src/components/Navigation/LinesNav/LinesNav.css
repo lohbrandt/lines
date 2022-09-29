@@ -1,0 +1,13 @@
+.lines-nav {
+  grid-area: lines;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.nav-list li {
+  padding-left: 1rem;
+}

@@ -1,0 +1,160 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  font-size: 62.5%;
+  line-height: 1.15;
+  min-height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+  text-align: center;
+}
+
+/* Set core body defaults */
+body {
+  display: grid;
+  font-family: Arial, sans-serif;
+  font-size: 1.3rem;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 1.4rem;
+  font-stretch: 100%;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.container {
+  padding: 0 1.5rem;
+  max-width: 62.5rem;
+  margin: 0 auto;
+}
+
+.cta {
+  border: none;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem;
+  background: none;
+}
+
+.line-select:hover {
+  filter: brightness(110%);
+}
+
+.station-select:hover {
+  background-color: #ccc;
+}
+
+.station-select {
+  margin: 0.2em 0;
+  padding: 0;
+}
+
+.card {
+  border-radius: 0.8em;
+  box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.3);
+  display: grid;
+  gap: 1em;
+  padding: 2em;
+  position: relative;
+}
+
+.card__lines {
+  grid-template-areas: "lines lines lines" "stations connection connection" "stations connection connection";
+}
+
+.lines-nav {
+  grid-area: lines;
+}
+
+.lines-list {
+  display: flex;
+}
+
+.lines-list .active .cta {
+  border-bottom: 0.2em solid red;
+}
+
+.lines-stations {
+  grid-area: stations;
+  text-align: left;
+}
+
+.lines-stations .active span {
+  font-weight: 700;
+}
+
+.stations-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lines-connections {
+  grid-area: connection;
+  text-align: left;
+}
+
+.lines-connection__access {
+  display: flex;
+}
+
+.access-list {
+  display: flex;
+  margin-left: 0.5em;
+}
+
+.next-list li {
+  margin: 0.4em 0;
+  padding: 0;
+}
+
+.primary-footer {
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  padding: 3rem;
+  background-color: #111;
+  text-align: center;
+}
+.primary-footer p {
+  color: #ccc;
+  margin-left: auto;
+  margin-right: auto;
+}
+.primary-footer ul {
+  color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 0 2rem;
+  padding: 0;
+}
+.primary-footer li + li {
+  margin-left: 1rem;
+}
+.primary-footer a {
+  color: inherit;
+}
+.primary-footer a:hover,
+.primary-footer a:focus {
+  color: #aaa;
+  text-decoration: none;
+}
