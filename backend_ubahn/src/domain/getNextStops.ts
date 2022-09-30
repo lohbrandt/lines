@@ -24,11 +24,11 @@ export function getNextStops(
   nStops: number = 3
 ): string[] {
   if (!line || !fromStation)
-    throw new Error(`No line ${line} with stattion ${fromStation} avalible`);
+    throw new Error(`No line ${line} with stattion ${fromStation} avalible`); // TS: there are some typos here
   const stationId = line.stations.indexOf(fromStation);
   if (stationId === -1)
     throw new Error(`No line ${line} with stattion ${fromStation} avalible`);
-  const stations = line.stations;
+  const stations = line.stations; // TS: IMO we should use some more blank spaces to separate the different parts of the code better and make it more readable
   if (direction === Direction.Forward)
     return stations.slice(stationId + 1, stationId + 1 + nStops);
   else {

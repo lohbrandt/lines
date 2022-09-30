@@ -38,11 +38,11 @@ const homeController = async (
   }
   const line = getLineByName(lineName);
   if (!line) {
-    res.status(400).json({ success: false, msg: "need a corrent line name" });
+    res.status(400).json({ success: false, msg: "need a corrent line name" }); // TS: corrent? also, IMO this should be 404
     return;
   }
   if (!station) {
-    res.status(200).json({ sucess: false, msg: "need station" });
+    res.status(200).json({ sucess: false, msg: "need station" }); // TS: we shouldn't return 200 in this case
     return;
   }
   const lines = getLines();
@@ -54,10 +54,10 @@ const homeController = async (
       return { name: line.name, color: line.color };
     });
   } else {
-    simpleConnection = undefined;
+    simpleConnection = undefined; // TS: why not return an empty array? IMO that's easier since you don't need to specially handle the undefined case
   }
   res.status(200).json({
-    success: true,
+    success: true, // TS: why have a 'success' field at all in the payload? IMO that's redundant and should be managed by the status code alone
     connections: simpleConnection,
     line,
     station,

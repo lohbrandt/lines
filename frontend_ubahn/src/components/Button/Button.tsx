@@ -19,7 +19,7 @@ export const Button = (props: ButtonProps) => {
     onClickHandler,
     style,
     testId,
-    ...rest
+    ...rest // TS: the ButtonProps don't declare that there's anything else that could be passed to the button
   } = props;
 
   // const toggleClick = (e: React.MouseEvent): void => {
@@ -30,7 +30,7 @@ export const Button = (props: ButtonProps) => {
     <button
       className={className}
       // onClick={toggleClick}
-      onClick={(el) => console.info("hello")}
+      onClick={(el) => console.info("hello")} // TS: onClickHandler is not called :)
       data-testId={testId}
       disabled
       style={style}

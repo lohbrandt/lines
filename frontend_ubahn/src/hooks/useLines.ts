@@ -6,6 +6,7 @@ export type LinesOptions = {
   id?: UndergroundLines;
 };
 
+// TS: I like this hook
 export const useLines = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<Error | undefined>(undefined);

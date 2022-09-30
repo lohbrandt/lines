@@ -1,6 +1,7 @@
 import Express from "express";
 import { Query, Send } from "express-serve-static-core";
 
+// TS: I like that! 
 export interface TypedRequestBody<T> extends Express.Request {
   body: T;
 }
