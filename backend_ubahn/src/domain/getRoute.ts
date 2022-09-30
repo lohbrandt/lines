@@ -70,6 +70,7 @@ export function getRoute(
     };
     route.push(item);
   }
+  // TS: this algorithm won't return the correct answer in many cases: e.g. "Westhafen" to "Bundestag" will miss that you have to switch e.g. to U6 between the lines
 
   return route;
 }

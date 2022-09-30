@@ -36,7 +36,7 @@ router.get(
     // find the specific line by key
     const requestedLineId = req.params.id;
 
-    const requestedLine = lines.find((line) => line.name === requestedLineId);
+    const requestedLine = lines.find((line) => line.name === requestedLineId); // TS: guess you could use your getLineByName function here
     if (!requestedLine) {
       res.sendStatus(404);
       return;

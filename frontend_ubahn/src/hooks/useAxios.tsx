@@ -1,6 +1,8 @@
 import axios, { Method } from "axios";
 import { useEffect, useState } from "react";
 
+// TS: we use a similar pattern in our of our apps and it works quite well, however react-query seems to do a better job
+// TS: also, this is not even used in this project
 const useFetch = <T extends Partial<T>>(
   url: string,
   method: Method,

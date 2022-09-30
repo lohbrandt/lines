@@ -16,7 +16,8 @@ function App() {
             <a href="https://bvg.de">BVG</a>
           </li>
           <li>
-            <a href="https://lofine.com">LOFINO</a>
+            <a href="https://lofine.com">LOFINO</a>{" "}
+            {/* TS: it's https://www.lofino.de ;)  */}
           </li>
         </ul>
         <p>© Steffen Lohbrandt</p>

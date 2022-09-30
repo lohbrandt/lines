@@ -8,11 +8,12 @@ type HeaderProps = {
   style?: React.CSSProperties;
 };
 
+// TS: component is not used
 export const Header = (props: HeaderProps) => {
   const {
     children,
     className,
-    component: AsComponent = "header",
+    component: AsComponent = "header", // TS: interesting, but why would you need anything other than <header>? I'd go with YAGNI here for now
     style,
   } = props;
 
